@@ -1,0 +1,67 @@
+@startuml
+!pragma layout smetana
+skinparam dpi 180
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Arial
+skinparam defaultFontSize 14
+skinparam classBackgroundColor #F1F6FB
+skinparam classBorderColor #24496A
+skinparam ArrowColor #496981
+skinparam nodesep 28
+skinparam ranksep 38
+hide empty members
+
+abstract class Shape {
+  - id : String {readOnly}
+  - renderer : Renderer
+  # Shape(id : String, renderer : Renderer)
+  + getId() : String
+  # getRenderer() : Renderer
+  + setImplementation(renderer : Renderer) : void
+  {abstract} + execute() : String
+}
+class Circle {
+  - radius : int {readOnly}
+  + getRadius() : int
+  + execute() : String
+}
+class Square {
+  - side : int {readOnly}
+  + getSide() : int
+  + execute() : String
+}
+interface Renderer {
+  + renderCircle(radius : int) : String
+  + renderSquare(side : int) : String
+}
+class VectorRenderer {
+  + renderCircle(radius : int) : String
+  + renderSquare(side : int) : String
+}
+class RasterRenderer {
+  + renderCircle(radius : int) : String
+  + renderSquare(side : int) : String
+}
+class AsciiRenderer {
+  + renderCircle(radius : int) : String
+  + renderSquare(side : int) : String
+}
+class Main <<client>> {
+  {static} + main(args : String[]) : void
+  - runDemo() : boolean
+  - checkRuntimeSwitch() : void
+}
+Shape <|-- Circle
+Shape <|-- Square
+Shape "0..*" o-right-> "1" Renderer : renderer
+Renderer <|.. VectorRenderer
+Renderer <|.. RasterRenderer
+Renderer <|.. AsciiRenderer
+Main ..> Circle : creates / uses
+Main ..> Square : creates / uses
+Main ..> VectorRenderer : creates
+Main ..> RasterRenderer : creates
+Main ..> AsciiRenderer : creates
+@enduml

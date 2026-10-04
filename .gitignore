@@ -4,3 +4,4 @@ tmp/
 dist/
 *.zip
 __pycache__/
+SUBMISSION.txt
