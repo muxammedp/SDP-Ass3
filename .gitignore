@@ -1,0 +1,6 @@
+out/
+.tools/
+tmp/
+dist/
+*.zip
+__pycache__/
