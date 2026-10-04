@@ -51,17 +51,16 @@ There are no application dependencies beyond JDK classes. `Main.java` is in the
 default package. Other classes use the `drawing` package. The demo requires no
 input, network, database, GUI, or hardware. Rendering is a text simulation.
 
-On the current Windows machine, PATH initially selected Java 8 and did not expose
-`javac`. For this checkout, a portable JDK 17 was downloaded into the ignored
-`.tools/jdk17` folder. To select it for the current PowerShell session:
+On the current Windows machine, the default PATH selects Java 8 and does not expose
+`javac`. An existing JDK 25 is available outside this project. To select it for the
+current PowerShell session before running the standard commands above:
 
 ```powershell
-$jdkFolder = Get-ChildItem .tools/jdk17 -Directory | Select-Object -First 1
-$env:JAVA_HOME = $jdkFolder.FullName
+$env:JAVA_HOME = "$env:USERPROFILE/.jdks/openjdk-25.0.1"
 $env:PATH = "$env:JAVA_HOME/bin;$env:PATH"
 ```
 
-The portable JDK is excluded from the ZIP; the receiving machine must provide
+The final program was also verified on JDK 17. Each receiving machine must provide
 its own JDK. `--release 17` generates Java 17-compatible class files.
 
 ## Expected demonstration results
