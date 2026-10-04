@@ -5,3 +5,4 @@ src/drawing/Square.java
 src/drawing/Renderer.java
 src/drawing/VectorRenderer.java
 src/drawing/RasterRenderer.java
+src/drawing/AsciiRenderer.java

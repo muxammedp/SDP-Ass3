@@ -1,3 +1,4 @@
+import drawing.AsciiRenderer;
 import drawing.Circle;
 import drawing.RasterRenderer;
 import drawing.Square;
@@ -31,6 +32,12 @@ public final class Main {
                 new Square("square-1", 3, new RasterRenderer()).execute(),
                 "RASTER square side=3");
         checkRuntimeSwitch();
+        checkResult("T6", "Circle + AsciiRenderer",
+                new Circle("circle-1", 2, new AsciiRenderer()).execute(),
+                "ASCII circle radius=2 (o)");
+        checkResult("T7", "Square + AsciiRenderer",
+                new Square("square-1", 3, new AsciiRenderer()).execute(),
+                "ASCII square side=3 [#]");
         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
         return passed == total;
     }
