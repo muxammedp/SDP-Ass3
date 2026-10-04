@@ -1,16 +1,16 @@
 # Assignment 3 | Bridge Pattern
 
-- **Student name:** not supplied.
-- **Group:** not supplied.
+- **Student name:** Zhuman Mukhammed.
+- **Group:** SE-2522.
 - **Topic:** A - Drawing.
-- **Repository URL:** not supplied; the repository currently exists locally.
+- **Repository URL:** https://github.com/muxammedp/SDP-Ass3
 - **Base commit:** `423467d70f88646b802b9eb139b2db4efc1c2ec2`.
 - **I3 source commit:** `be88bfaeeb7be8418ab0b2cd7ef11996e0e0555a`.
 - **Submitted commit:** the exact packaged revision is recorded in `SUBMISSION.txt` at the ZIP root.
 
-Identification and the repository URL must be completed before uploading to Moodle.
-The required archive name is `Assignment3_Group_Surname_Name.zip`, with the
-student's actual details substituted. All report and program text is in English.
+The submission archive is `Assignment3_SE-2522_Zhuman_Mukhammed.zip`.
+In the Moodle submission text, provide the repository URL above and the exact
+submitted commit from `SUBMISSION.txt`. All report and program text is in English.
 
 ## Role map
 
